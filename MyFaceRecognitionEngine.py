@@ -11,9 +11,6 @@ class MyFaceRecognitionEngine:
     def __init__(self):
         self.init_values()
 
-
-
-
     def init_values(self):
         # get palak's encodings
         palak_image=face_recognition.load_image_file("faces/palak.jpg")
@@ -56,14 +53,9 @@ class MyFaceRecognitionEngine:
                     font = cv2.FONT_HERSHEY_COMPLEX
 
                     cv2.putText(frame, "Hi! " + name, (10, 100), font, 1.5, (255, 0, 0), 3, 2)
-            # Display the resulting frame
-            # cv2.imshow('frame', frame)
+
             break
-            # the 'q' button is set as the
-            # quitting button you may use any
-            # desired button of your choice
-            # if cv2.waitKey(1) & 0xFF == ord('q'):
-            #     break
+
 
         # After the loop release the cap object
         vid.release()
